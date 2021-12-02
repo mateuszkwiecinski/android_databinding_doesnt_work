@@ -23,3 +23,8 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build
+      - run: git reset HEAD~1 --hard
+
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
